@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app"></div>
+    <script>
+        //Esta línea crea una nueva aplicación Vue.js
+        const vm = Vue.createApp({
+            //Esta función define los datos que utilizará nuestra aplicación.
+            data() {
+                return {
+                    text: '<p>Hello Vue!</p>'
+                }
+            },      //`<div>{{text}}</div>`
+                    //`<div v-once v-text="text"></div>`
+            template: `<div v-html="text"></div>`
+            //Esta línea monta la aplicación Vue.js en el elemento con el ID "app" en nuestro HTML.
+        }).mount('#app');
+        //simplemente imprime toda la instancia de la aplicación Vue.js 
+        console.log(vm);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app"></div>
+    <script>
+        //Esta línea crea una nueva aplicación Vue.js
+        Vue.createApp({
+            //Esta función define los datos que utilizará nuestra aplicación.
+            data() {
+                return {
+                    counter: 0
+                };
+            },
+            methods: {
+                increment(){
+                    this.counter++;
+                }
+            },
+                   //`<button v-on:click ="increment">{{counter}}</button>`
+            template:`<button v-on:keyup ="increment">{{counter}}</button>`
+            //Esta línea monta la aplicación Vue.js en el elemento con el ID "app" en nuestro HTML.
+        }).mount('#app');
+    </script>
+</body>
+</html>

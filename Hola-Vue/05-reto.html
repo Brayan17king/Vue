@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app"></div>
+    <script>
+            Vue.createApp({
+            data() {
+                return {
+                    counter: 0,
+                    positivo: "+",
+                    negativo: "-",
+                    reset: 'Reset'
+                }
+            },
+            methods:{
+                increment(){
+                    this.counter++;
+                },
+                decrement(){
+                    this.counter--;
+                },
+                res(){
+                    this.counter = 0
+                }
+            },
+            template: `<button v-on:click="decrement">{{negativo}}</button>
+                       <button>{{counter}}</button>
+                       <button v-on:click="increment">{{positivo}}</button>
+                       <button v-on:click="res">{{reset}}</button>
+                       `
+        }).mount('#app');
+    </script>   
+    
+</body>
+</html>

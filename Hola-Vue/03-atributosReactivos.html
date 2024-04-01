@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app"></div>
+    
+    <script>
+        //Esta línea crea una nueva aplicación Vue.js
+        const vm = Vue.createApp({
+            //Esta función define los datos que utilizará nuestra aplicación.
+            data() {
+                return {
+                    att: 'src',
+                    img: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4f62fd50-1e8e-4b7a-9b0c-44c67a757df1/d6qqbfx-85585020-ba7d-49d5-b9f4-31b5ba6bfb1a.jpg/v1/fit/w_828,h_1020,q_70,strp/bardock_by_bejitsu_d6qqbfx-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTYwMCIsInBhdGgiOiJcL2ZcLzRmNjJmZDUwLTFlOGUtNGI3YS05YjBjLTQ0YzY3YTc1N2RmMVwvZDZxcWJmeC04NTU4NTAyMC1iYTdkLTQ5ZDUtYjlmNC0zMWI1YmE2YmZiMWEuanBnIiwid2lkdGgiOiI8PTQ1NDYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.pkiZfvyRrLOGlQs4rL7-AZYUSS_1MN0f8Iu25mVMy8Q'
+                }
+            },
+            template: `<img v-bind:[att]="img">`
+            //Esta línea monta la aplicación Vue.js en el elemento con el ID "app" en nuestro HTML.
+        }).mount('#app');
+        //simplemente imprime toda la instancia de la aplicación Vue.js 
+        console.log(vm);
+    </script>
+</body>
+</html>
